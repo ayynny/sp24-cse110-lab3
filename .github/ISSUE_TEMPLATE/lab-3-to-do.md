@@ -10,8 +10,8 @@ assignees: '@ayynny'
 
 [x]Standup notes
 
-[]General CSS topics
+[x]General CSS topics
 
-[]CSS selectors
+[x]CSS selectors
 
-[]CSS Validation
+[x]CSS Validation
