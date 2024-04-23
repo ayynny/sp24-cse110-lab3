@@ -7,8 +7,11 @@ assignees: '@ayynny'
 
 ---
 [x]Pull requests
+
 [x]Standup notes
 
 []General CSS topics
+
 []CSS selectors
+
 []CSS Validation
