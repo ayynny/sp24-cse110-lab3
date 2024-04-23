@@ -181,6 +181,6 @@ div:has(> .important) {
 }
 
 /* Nested Selector */
-@nest .main-content .grid-item {
+.main-content .grid-item {
     padding: 15px;
 }
