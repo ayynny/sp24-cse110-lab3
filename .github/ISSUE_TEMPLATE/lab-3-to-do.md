@@ -3,13 +3,12 @@ name: Lab 3 to do
 about: Lab 3 tasks
 title: ''
 labels: ''
-assignees: ''
+assignees: '@ayynny'
 
 ---
+[x]Pull requests
+[x]Standup notes
 
-- Pull requests
-- Standup notes
-
-- General CSS topics
-- CSS selectors
-- CSS Validation
+[]General CSS topics
+[]CSS selectors
+[]CSS Validation
