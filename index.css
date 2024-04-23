@@ -1,0 +1,186 @@
+:root {
+    --primary-color: pink;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Google Font */
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+    color: black; /* Default text color */
+    text-align: justify; /* Justifies text throughout the body */
+}
+
+h1 {
+    color: rgb(197, 145, 183);
+    margin-left: 100px;
+    font-size: 50pt;
+    border-bottom: 5px solid purple; /* Adds a solid purple bottom border */
+    text-decoration: overline; /* Adds overline text decoration */
+}
+
+h3 {
+    color: #AF9;
+    font-size: 1cm;
+    margin: 10px 0;
+    border-bottom: 3px dotted maroon; /* Dotted border style */
+}
+
+summary {
+    color: hsl(0, 50%, 50%);
+    font-size: 0.8em;
+    padding: 5px;
+    border: 2px dashed orange; /* Dashed border around summary */
+    border-radius: 8px; /* Rounded corners */
+}
+
+h2 {
+    color: color(display-p3 1 0 0 / 0.8);
+    margin: 5px;
+    border: 2px solid navy; /* Solid navy border */
+    border-radius: 12px; /* Slightly more rounded corners */
+}
+
+h4 {
+    color: color-mix(in srgb, rgb(255, 0, 0) 50%, rgb(0, 0, 255) 50%);
+    padding: 10px 20px;
+    border: 1px solid grey; /* Grey border */
+    border-radius: 5px; /* Soft rounded corners */
+    text-align: left; /* Aligns text to the left */
+}
+
+img {
+    width: 20%;
+    height: auto;
+    border: 3px solid gray; /* More prominent border */
+    border-radius: 15px; /* Clearly rounded corners */
+}
+
+.meow {
+    border: 2px solid black;
+    margin: 20px 15px;
+    padding: 10px 20px;
+    border-radius: 10px; /* Consistent rounded style */
+    display: inline-block; /* Allows elements to sit next to each other as blocks */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around; /* Distributes space around items */
+    align-items: center; /* Vertically align items */
+    padding: 10px 0;
+}
+
+.nav-item {
+    display: inline-block; /* Displays navigation items inline but with block behaviors */
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none; /* Element will not be displayed */
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+.footer {
+    position: fixed; /* Footer is fixed at the bottom of the viewport */
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ddd; /* Light grey background */
+    text-align: center; /* Center-aligns the text within the footer */
+}
+
+.sidebar {
+    position: absolute; /* Positioned absolutely within a relative parent */
+    top: 100px; /* Distance from the top of the parent */
+    left: 0;
+    width: 20%; /* Sidebar takes 20% of the horizontal space */
+}
+
+.header {
+    position: sticky; /* Sticks to the top when you scroll */
+    top: 0;
+    background-color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr; /* One column grid on smaller screens */
+    }
+    .nav {
+        flex-direction: column; /* Stack nav items vertically on small screens */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+}
+
+/* Additional selectors to meet requirement */
+/* ID Selector */
+#main-title {
+    background-color: var(--primary-color); /* Example of using the ID selector */
+}
+
+/* Universal Selector */
+* {
+    box-sizing: border-box; /* Applies box-sizing to all elements */
+}
+
+/* Attribute Selector */
+[type="text"] {
+    border-color: red;
+}
+
+/* Pseudo-class Selector */
+button:hover {
+    background-color: yellow;
+}
+
+/* Selector List */
+h1, h2, h3 {
+    margin-top: 5px;
+}
+
+/* Combinators */
+.nav > .nav-item { /* Child Combinator */
+    margin-right: 10px;
+}
+
+.main-content .grid-item { /* Descendant Combinator */
+    background: white;
+}
+
+h1 + p { /* Adjacent sibling combinator */
+    font-size: 18px;
+}
+
+.nav-item ~ .nav-item { /* General sibling combinator */
+    border-left: 1px solid grey;
+}
+
+/* Combining Two Selectors */
+div.meow {
+    background-color: lightgrey;
+}
+
+/* New Selector: :has() */
+div:has(> .important) {
+    border: 2px solid red;
+}
+
+/* Nested Selector */
+@nest .main-content .grid-item {
+    padding: 15px;
+}
